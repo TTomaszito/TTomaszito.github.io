@@ -1,7 +1,8 @@
 # github.io
 Project demonstrations
 
-Paste this link into the browser to see all the projects
+Use link into the browser to see Project directory;
+
 http://ttomaszito.github.io./index.html
 
 https://ttomaszito.github.io./WeatherApp/index.html
