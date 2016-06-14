@@ -7,27 +7,14 @@
   
   <h4>Http compatibility</h4>
   <p> http://ttomaszito.github.io./TributePage/index.html -- Tribute Page  </p>
-  http://ttomaszito.github.io./QuoteMachine/index.html -- Quote Machine 
+  <p> http://ttomaszito.github.io./QuoteMachine/index.html -- Quote Machine </p>
   
-  Https compatibility  <BR></BR>
+  <h4>Https compatibility </h4> 
   
-  https://ttomaszito.github.io./WeatherApp/index.html -- Weather App <BR></BR>
+  </p>https://ttomaszito.github.io./WeatherApp/index.html -- Weather App</p>
   
   
 </div>
   
   
- <a> Use link into the browser to see Project directory: </a>
- <a>http://ttomaszito.github.io./index.html</a>
-  
-  
-  Http compatibility <BR></BR>
-  
-  
-  http://ttomaszito.github.io./TributePage/index.html -- Tribute Page  <BR></BR>
-  http://ttomaszito.github.io./QuoteMachine/index.html -- Quote Machine <BR></BR>
-  
-
-  Https compatibility  <BR></BR>
-  
-  https://ttomaszito.github.io./WeatherApp/index.html -- Weather App <BR></BR>
+ 
