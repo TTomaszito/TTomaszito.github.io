@@ -3,7 +3,16 @@
 <div>
   <h2>Project demonstrations</h2>
   <p> Use link into the browser to see Project directory: </p>
- <a>http://ttomaszito.github.io./index.html</a>
+  <link>http://ttomaszito.github.io./index.html</link>
+  
+  <h4>Http compatibility</h4>
+  <p> http://ttomaszito.github.io./TributePage/index.html -- Tribute Page  </p>
+  http://ttomaszito.github.io./QuoteMachine/index.html -- Quote Machine 
+  
+  Https compatibility  <BR></BR>
+  
+  https://ttomaszito.github.io./WeatherApp/index.html -- Weather App <BR></BR>
+  
   
 </div>
   
