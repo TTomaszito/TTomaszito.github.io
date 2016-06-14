@@ -1,7 +1,7 @@
-# github.io
+
 
 <div>
-  <h2>Project demonstrations</h2>
+  <h2>Project Showcase</h2>
   <p> Use link into the browser to see Project directory: </p>
   <link>http://ttomaszito.github.io./index.html</link>
   
