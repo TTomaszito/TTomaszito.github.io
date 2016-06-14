@@ -1,0 +1,38 @@
+ 
+
+body {
+  margin-top: 50px;
+}
+
+#about-title{
+  padding-bottom: 40px;
+}
+
+#about-section{
+  
+  padding-left: 50px;
+  padding-right:50px;
+  padding-bottom:50px;
+  
+}
+
+#car-description{
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right:15px;
+  padding-bottom:30px;
+  
+}
+
+h1, h2 {
+    font-family: 'Orbitron';
+}
+
+#red-accents {
+  color: red;
+  
+}
+#collimation {
+-webkit-clip-path: polygon(0 14%, 71% 14%, 100% 50%, 74% 87%, 0 87%);
+clip-path: polygon(0 14%, 71% 14%, 100% 50%, 74% 87%, 0 87%);
+}

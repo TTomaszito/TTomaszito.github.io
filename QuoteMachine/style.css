@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+  
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  text-shadow: 3px 3px #00b8e6;
+}
+
+.sharp {
+  border-radius:0;
+}
+
+
+
+.container {
+  background-color: #cceeff;
+  margin-top: 100px;
+  padding-bottom:120px;
+  padding-top:50px;
+ }
+
+.row {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+}
+
+#title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+}
+
+#Quote,#Author,#CharacterCount  {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px
+}
+
+#Author {
+  padding-right: 50px;
+  padding-bottom: 20px
+}
+
+#CharacterCount {
+  padding-left: 50px;
+  padding-bottom: 20px
+}
+#collimation {
+-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 80%, 75% 80%, 75% 100%, 50% 80%, 0 80%);
+clip-path: polygon(0 10%, 100% 10%, 100% 80%, 75% 80%, 75% 100%, 50% 80%, 0 80%);
+}
