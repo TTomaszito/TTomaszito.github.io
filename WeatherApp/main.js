@@ -13,7 +13,9 @@ $(document).ready(function() {
       city = location.results[1].address_components[1].long_name;
       state = location.results[1].address_components[4].short_name;
 
-      $("#locationDisplay").html(neighborhood + " ," + city + " ," + state);
+      $("#neighborhoodDisplay").html(neighborhood);
+      $("#cityDisplay").html(city);
+      $("#stateDisplay").html(state);
 
       //console.log(neighborhood,city ,state);
       url = "https://api.forecast.io/forecast/a6a19b73560bb483d6ebdb9fdcc0b8c2/" + latitude + "," + longitude;
@@ -24,7 +26,7 @@ $(document).ready(function() {
         dataType: 'jsonp',
         success: function(results) {
 
-          temperature = results.currently.temperature;
+          temperature = Math.round(results.currently.temperature)+"\xB0"+"F";
           $("#temperatureDisplay").html(temperature);
           summary = results.currently.summary;
           $("#summaryDisplay").html(summary);
@@ -77,6 +79,8 @@ function statusIcon(icon) {
   };
 
 };
+
+
 
 // alternate methood to geolocation to be designed later.
 
