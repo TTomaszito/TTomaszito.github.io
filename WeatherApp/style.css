@@ -1,5 +1,4 @@
 .container{
-  border-style: solid;
   max-width: none !important;
   max-haight:  none !important;
   margin-top: 20px;
@@ -43,9 +42,7 @@
   height: 150px;
   font-size:25px;
   text-align:center;
-  
-  
-  
+    
 }
 #iconDisplay{
   text-align:center;
@@ -56,3 +53,4 @@ i{
   font-size:85px;
 }
   
+ 
