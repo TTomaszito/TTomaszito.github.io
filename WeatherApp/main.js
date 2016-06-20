@@ -1,47 +1,57 @@
 $(document).ready(function() {
-
   var latitude, longitude, neighborhood, city, state, temperature, summary, icon, url;
+  
+  getData();
+  
 
-  navigator.geolocation.getCurrentPosition(function(position) {
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
+});
 
-    var GEOCODING = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + '%2C' + longitude + '&language=en';
 
-    $.getJSON(GEOCODING).done(function(location) {
-      neighborhood = location.results[1].address_components[0].long_name;
-      city = location.results[1].address_components[1].long_name;
-      state = location.results[1].address_components[4].short_name;
 
-      $("#neighborhoodDisplay").html(neighborhood);
-      $("#cityDisplay").html(city);
-      $("#stateDisplay").html(state);
 
-      //console.log(neighborhood,city ,state);
-      url = "https://api.forecast.io/forecast/a6a19b73560bb483d6ebdb9fdcc0b8c2/" + latitude + "," + longitude;
+function getData (latitude, longitude, neighborhood, city, state, temperature, summary, icon, url) {
+   
 
-      $.ajax({
+    navigator.geolocation.getCurrentPosition(function(position) {
+      latitude = position.coords.latitude;
+      longitude = position.coords.longitude;
 
-        url: url,
-        dataType: 'jsonp',
-        success: function(results) {
+      var GEOCODING = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + '%2C' + longitude + '&language=en';
 
-          temperature = Math.round(results.currently.temperature)+"\xB0"+"F";
-          $("#temperatureDisplay").html(temperature);
-          summary = results.currently.summary;
-          $("#summaryDisplay").html(summary);
-          icon = results.currently.icon;
-          //$("#iconDisplay").html(icon);
-          statusIcon(icon);
+      $.getJSON(GEOCODING).done(function(location) {
+        neighborhood = location.results[1].address_components[0].long_name;
+        city = location.results[1].address_components[1].long_name;
+        state = location.results[1].address_components[4].short_name;
 
-        }
+        $("#neighborhoodDisplay").html(neighborhood);
+        $("#cityDisplay").html(city);
+        $("#stateDisplay").html(state);
+
+        //console.log(neighborhood,city ,state);
+        url = "https://api.forecast.io/forecast/a6a19b73560bb483d6ebdb9fdcc0b8c2/" + latitude + "," + longitude;
+
+        $.ajax({
+
+          url: url,
+          dataType: 'jsonp',
+          success: function(results) {
+
+            temperature = Math.round(results.currently.temperature) + "\xB0" + "F";
+            $("#temperatureDisplay").html(temperature);
+            summary = results.currently.summary;
+            $("#summaryDisplay").html(summary);
+            icon = results.currently.icon;
+            //$("#iconDisplay").html(icon);
+            statusIcon(icon);
+
+          }
+        });
+
       });
 
     });
 
-  });
-
-});
+  };
 
 function statusIcon(icon) {
 
@@ -79,8 +89,6 @@ function statusIcon(icon) {
   };
 
 };
-
-
 
 // alternate methood to geolocation to be designed later.
 
