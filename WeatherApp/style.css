@@ -7,7 +7,7 @@
  
 }
 #header{
-  margin-top:10px;
+  margin-top:50px;
   margin-bottom:10px;
   border-style: solid;
 }
@@ -16,6 +16,23 @@
   margin-bottom:10px;
   border-style: solid;
   
+}
+#footer{
+  margin-top:10px;
+  margin-bottom:10px;
+  border-style: solid;
+}
+#Button{
+   -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  background: #000000;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 50%;
 }
 
 .col-xs-2{
@@ -43,6 +60,9 @@
   font-size:25px;
   text-align:center;
     
+}
+.col-xs-7{
+  
 }
 #iconDisplay{
   text-align:center;
