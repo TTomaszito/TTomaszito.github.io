@@ -1,57 +1,72 @@
 $(document).ready(function() {
   var latitude, longitude, neighborhood, city, state, temperature, summary, icon, url;
-  
+
   getData();
-  
 
 });
 
+function getData(latitude, longitude, neighborhood, city, state, temperature, summary, icon, url) {
 
+  navigator.geolocation.getCurrentPosition(function(position) {
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
 
+    var GEOCODING = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + '%2C' + longitude + '&language=en';
 
-function getData (latitude, longitude, neighborhood, city, state, temperature, summary, icon, url) {
-   
+    $.getJSON(GEOCODING).done(function(location) {
+      neighborhood = location.results[1].address_components[0].long_name;
+      city = location.results[1].address_components[1].long_name;
+      state = location.results[1].address_components[4].short_name;
 
-    navigator.geolocation.getCurrentPosition(function(position) {
-      latitude = position.coords.latitude;
-      longitude = position.coords.longitude;
+      $("#neighborhoodDisplay").html(neighborhood);
+      $("#cityDisplay").html(city);
+      $("#stateDisplay").html(state);
 
-      var GEOCODING = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + '%2C' + longitude + '&language=en';
+      //console.log(neighborhood,city ,state);
+      url = "https://api.forecast.io/forecast/a6a19b73560bb483d6ebdb9fdcc0b8c2/" + latitude + "," + longitude;
 
-      $.getJSON(GEOCODING).done(function(location) {
-        neighborhood = location.results[1].address_components[0].long_name;
-        city = location.results[1].address_components[1].long_name;
-        state = location.results[1].address_components[4].short_name;
+      $.ajax({
 
-        $("#neighborhoodDisplay").html(neighborhood);
-        $("#cityDisplay").html(city);
-        $("#stateDisplay").html(state);
+        url: url,
+        dataType: 'jsonp',
+        success: function(results) {
 
-        //console.log(neighborhood,city ,state);
-        url = "https://api.forecast.io/forecast/a6a19b73560bb483d6ebdb9fdcc0b8c2/" + latitude + "," + longitude;
+          temperature = Math.round(results.currently.temperature) + "\xB0" + "F";
+          var tempfahrenheit = Math.round(results.currently.temperature) + "\xB0" + "F";
+          var tempCelcius = Math.round(((results.currently.temperature) - 32) * (5 / 9)) + "\xB0" + "C";
 
-        $.ajax({
+          changeUnits(tempfahrenheit,tempCelcius);
 
-          url: url,
-          dataType: 'jsonp',
-          success: function(results) {
+          $("#temperatureDisplay").html(temperature);
+          summary = results.currently.summary;
+          $("#summaryDisplay").html(summary);
+          icon = results.currently.icon;
+          //$("#iconDisplay").html(icon);
+          statusIcon(icon);
 
-            temperature = Math.round(results.currently.temperature) + "\xB0" + "F";
-            $("#temperatureDisplay").html(temperature);
-            summary = results.currently.summary;
-            $("#summaryDisplay").html(summary);
-            icon = results.currently.icon;
-            //$("#iconDisplay").html(icon);
-            statusIcon(icon);
-
-          }
-        });
-
+        }
       });
 
     });
 
-  };
+  });
+
+};
+
+function changeUnits(tempfahrenheit,tempCelcius) {
+  var columnNumber = tempfahrenheit;
+  $("#Button").on("click", function() {
+    if (columnNumber == tempfahrenheit) {
+      $("#temperatureDisplay").html(tempfahrenheit);
+      columnNumber = tempCelcius;
+    } else {
+      $("#temperatureDisplay").html(tempCelcius);
+      columnNumber = tempfahrenheit;
+    }
+
+  });
+
+};
 
 function statusIcon(icon) {
 
@@ -107,4 +122,11 @@ function statusIcon(icon) {
         $("#data2").html("Weather: " + json.weather[0].main);
         $("#data3").html("Temperature: " + json.main.temp + " Kelvin");
       });
+
+
+      tempfahrenheit = Math.round(results.currently.temperature) + "\xB0" + "F";
+          console.log(tempfahrenheit)
+          $("#tempDisplay").html(tempfahrenheit);
+
+          tempCelcius = Math.round(((results.currently.temperature) - 32) * (5 / 9)) + "\xB0" + "C";
     */
