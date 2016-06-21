@@ -22,18 +22,7 @@
   margin-bottom:10px;
   border-style: solid;
 }
-#Button{
-   -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 16px;
-  background: #000000;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  width: 50%;
-}
+
 
 .col-xs-2{
   max-width: none !important;
@@ -49,7 +38,7 @@
   height: 150px;
   font-size:40px;
   text-align:center;
-  padding-top:50px;
+  padding-top:15px;
 }
 .col-xs-8{
   max-width: none !important;
@@ -76,3 +65,27 @@ i{
 #footerZip{
   padding-top:20px;
 }
+
+#Button {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 20px;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 3px;
+  text-decoration: none;
+  width:120%;
+}
+
+.#Button:hover {
+  background: #f0f0f0;
+  text-decoration: none;
+}
+
+
+
+
+
