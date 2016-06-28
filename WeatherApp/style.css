@@ -1,11 +1,10 @@
-.container{
-  max-width: none !important;
-  max-haight:  none !important;
-  margin-top: 20px;
-  width: 600px;
-  height: 268px;
- 
+body{
+  background-color: #f2f2f2;
 }
+i{
+  font-size:85px;
+}
+
 #header{
   margin-top:50px;
   margin-bottom:10px;
@@ -22,7 +21,17 @@
   margin-bottom:10px;
   border-style: solid;
 }
-
+.container{
+  max-width: none !important;
+  max-haight:  none !important;
+  margin-top: 20px;
+  width: 600px;
+  height: 268px;
+ 
+}
+.col-xs-12{
+  background-color: white;
+}
 
 .col-xs-2{
   max-width: none !important;
@@ -53,14 +62,10 @@
 .col-xs-7{
   
 }
-#iconDisplay{
-  text-align:center;
-  padding-top:30px;
+.row{
+  background-color: white;
 }
 
-i{
-  font-size:85px;
-}
   
 #footerZip{
   padding-top:20px;
@@ -71,13 +76,14 @@ i{
   -moz-border-radius: 10;
   border-radius: 10px;
   font-family: Arial;
+  
   color: #000000;
-  font-size: 20px;
+  font-size: 15px;
   background: #ffffff;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 10px 10px 10px;
   border: solid #000000 3px;
   text-decoration: none;
-  width:120%;
+  width:170%;
 }
 
 .#Button:hover {
@@ -85,6 +91,14 @@ i{
   text-decoration: none;
 }
 
+
+#temperatureDisplay{
+  padding-left: 15px;
+}
+#iconDisplay{
+  text-align:center;
+  padding-top:30px;
+}
 
 
 

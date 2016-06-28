@@ -61,9 +61,11 @@ function changeUnits(tempfahrenheit, tempCelcius) {
   $("#Button").on("click", function() {
     if (columnNumber == tempfahrenheit) {
       $("#temperatureDisplay").html(tempfahrenheit);
+      $("#Button").html("Display °C")
       columnNumber = tempCelcius;
     } else {
       $("#temperatureDisplay").html(tempCelcius);
+      $("#Button").html("Display °F")
       columnNumber = tempfahrenheit;
     }
 
@@ -121,38 +123,3 @@ function statusIcon(icon) {
 
 };
 
-/* alternate methood to geolocation to be designed later.
-
-function test(){
-  var zip;
-
-    zip = document.getElementById("text").value;
-    var apikey =a339f5c5cfb45d09a20165c5e0019bc1
-    
-   
-  
-};
-
-/*$.getJSON("http://ip-api.com/json", function(json) {
-
-    latitude = json.lat;
-    longitude = json.lon;
-    $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" +
-      longitude + "&APPID=03ce8b27d8d332b6907e3a00041bb839",
-      function(json) {
-
-        var object = json;
-
-        console.log();
-        $("#data").html("Location: " + json.name);
-        $("#data2").html("Weather: " + json.weather[0].main);
-        $("#data3").html("Temperature: " + json.main.temp + " Kelvin");
-      });
-
-
-      tempfahrenheit = Math.round(results.currently.temperature) + "\xB0" + "F";
-          console.log(tempfahrenheit)
-          $("#tempDisplay").html(tempfahrenheit);
-
-          tempCelcius = Math.round(((results.currently.temperature) - 32) * (5 / 9)) + "\xB0" + "C";
-    */
