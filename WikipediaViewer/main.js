@@ -43,10 +43,7 @@ $(document).ready(function() {
             
             $("#display_articles").empty();
           };
-          
-
-          // $("<div id='article' />").text(results[1][i]).appendTo("#display_articles");
-
+    
         };
 
 
