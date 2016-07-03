@@ -7,33 +7,46 @@ $(document).ready(function() {
 
   });
 
-  $('form').submit(
-    function(event) {
-      event.preventDefault();
-      var search_term= $("#Search_term").val();
-      console.log(search_term)
+  // search keyword return results
 
-      
-      var results_number = "5";
+  $('#target').submit(function(event) {
+    event.preventDefault();
 
-      var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + "%22+" +
-        search_term + "+%22&limit=" +
-        results_number + "&format=json&callback=?";
+    var search_term = $("#Search_term").val();
+    var results_number = "5";
 
-      $.ajax({
+    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + "%22+" +
+      search_term + "+%22&limit=" +
+      results_number + "&format=json&callback=?";
 
-        url: url,
-        dataType: 'jsonp',
-        type: 'POST',
-        headers: {
-          'Wikiviewer': 'myviewer1'
-        },
-        success: function(results) {
-          console.log(results)
+    $.ajax({
 
-        }
-      });
+      url: url,
+      dataType: 'jsonp',
+      type: 'POST',
+      headers: {
+        'Wikiviewer': 'myviewer1'
+      },
+      success: function(results) {
+
+        $("#display_articles").empty(); // empty's the div on every new search.
+
+        for (i = 0; i < results_number; i++) {
+          var title = results[1][i];
+          var summary = results[2][i];
+          var link = results[3][i];
+
+          $("#display_articles").append('<div class="title">' + title + '</div>');
+          $("#display_articles").append('<div class="summary">'+ summary + '</div>');
+          $("#display_articles").append('<div class="link">'+ link + '</div>');
+
+          // $("<div id='article' />").text(results[1][i]).appendTo("#display_articles");
+
+        };
+
+
+      }
     });
+  });
 
 });
-
