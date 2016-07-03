@@ -24,9 +24,7 @@ $(document).ready(function() {
       url: url,
       dataType: 'jsonp',
       type: 'POST',
-      headers: {
-        'Wikiviewer': 'myviewer1'
-      },
+      
       success: function(results) {
 
         $("#display_articles").empty(); // empty's the div on every new search.
@@ -35,10 +33,17 @@ $(document).ready(function() {
           var title = results[1][i];
           var summary = results[2][i];
           var link = results[3][i];
+          console.log(title)
 
           $("#display_articles").append('<div class="title">' + title + '</div>');
           $("#display_articles").append('<div class="summary">'+ summary + '</div>');
           $("#display_articles").append('<div class="link">'+ link + '</div>');
+          
+          if (title === undefined){
+            
+            $("#display_articles").empty();
+          };
+          
 
           // $("<div id='article' />").text(results[1][i]).appendTo("#display_articles");
 
