@@ -39,7 +39,7 @@ $(document).ready(function() {
           $("#display_articles").append('<div class="summary">'+ summary + '</div>');
           $("#display_articles").append('<div class="link">'+ link + '</div>');
           
-          if (title === undefined){
+          if (title == undefined){
             
             $("#display_articles").empty();
           };
