@@ -7,14 +7,20 @@
     <div class="row">
       <div class="col-md-6" id="search_bar">
 
-        <form id="target"action="#" method="get">
-          <input type="text" id="Search_term"></input>
+        <form id="target" action="#" method="get">
+          <input type="text" id="SearchTerm"></input>
           <input type="submit" value="Search"></input>
+          <select name="cars" id="SearchNumber">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+          </select>
         </form>
     
       </div>
       <div class="col-md-6" id="button">
-        <button id="random_article" value="Random Article">Random Article</button>
+        <button id="random_article" value="RandomArticle">Random Article</button>
       </div>
       <div class="col-md-12" id="display_articles">
       </div>
