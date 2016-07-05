@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 	  		success: function(results) {
 
-	        	$("#display_articles").empty(); // empty's the div on every new search.
+	        	$("#DisplayArticles").empty(); // empty's the div on every new search.
 
 	        	for (i = 0; i < results_number; i++) {
 		        	var title = results[1][i];
@@ -37,13 +37,13 @@ $(document).ready(function() {
 		        	var link = results[3][i];
 		        	console.log(title)
 
-		        	$("#display_articles").append('<div class="title">' + title + '</div>');
-		        	$("#display_articles").append('<div class="summary">'+ summary + '</div>');
-		        	$("#display_articles").append('<div class="link">'+ link + '</div>');
+		        	$("#DisplayArticles").append('<div class="title">' + title + '</div>');
+		        	$("#DisplayArticles").append('<div class="summary">'+ summary + '</div>');
+		        	$("#DisplayArticles").append('<div class="link">'+ link + '</div>');
 
 		        	if (title == undefined){
 
-		        		$("#display_articles").empty();
+		        		$("#DisplayArticles").empty();
 		        	};
 
 	        	};

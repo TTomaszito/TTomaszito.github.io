@@ -1,28 +1,28 @@
 <head>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-   <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+<body>
   <div class="container">
     <div class="row">
-      <div class="col-md-6" id="search_bar">
+      <div class="col-lg-12 " id="SearchBar">
 
         <form id="target" action="#" method="get">
-          <input type="text" id="SearchTerm"></input>
-          <input type="submit" value="Search"></input>
-          <select name="cars" id="SearchNumber">
+          <input  type="text" id="SearchTerm"></input>
+          <input class="btn" type="submit" value="Search"></input>
+          <select  id="SearchNumber">
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="25">25</option>
             <option value="50">50</option>
           </select>
+          <button class="btn" id="RandomArticle" >Random</button>
         </form>
-    
+
       </div>
-      <div class="col-md-6" id="button">
-        <button id="random_article" value="RandomArticle">Random Article</button>
-      </div>
-      <div class="col-md-12" id="display_articles">
+     
+      <div class="col-md-12" id="DisplayArticles">
       </div>
     </div>
   </div>
