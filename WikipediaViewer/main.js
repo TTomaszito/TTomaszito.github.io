@@ -29,28 +29,21 @@ $(document).ready(function() {
 
 	  		success: function(results) {
 
-	        	$("#DisplayArticles").empty(); // empty's the div on every new search.
+	        	 // empty's the div on every new search.
+	        	$("#SearchResult").empty();
+	        	$("#SearchResult").css("background-color","#b3ffcc");
+	        	 
 
 	        	for (i = 0; i < results_number; i++) {
 		        	var title = results[1][i];
 		        	var summary = results[2][i];
 		        	var link = results[3][i];
-		        	console.log(results)
 
-		        	$("#DisplayArticles").append('<a class="title"' +'href="' + link +'">' + title + '</a>');
-		        	$("#DisplayArticles").append('<div class="summary">'+ summary + '</div>');
+		        	$("#DisplayArticles").append('<div id="SearchResult">');
+		        	$("#SearchResult").append('<a class="title"' +'href="' + link +'">' + title + '</a>');
+		        	$("#SearchResult").append('<p class="summary">'+ summary + '</p>');
+					$("#DisplayArticles").append('</div>');
 
-		        	if (title == undefined){
-
-		        		$("#DisplayArticles").empty();
-		        	};
-
-		        	if (summary === ""){
-
-		        		$("#DisplayArticles").pop();
-		        	};
-
-		        	
 
 	        	};
 

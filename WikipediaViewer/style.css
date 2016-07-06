@@ -3,7 +3,7 @@
 
 .container{
   margin-top:50px;
-  max-width: 80%;
+  max-width: 90%;
 }
 .row{
 	margin-top:10px;
@@ -14,13 +14,21 @@
 .col-lg-12{
     padding: 20px;
  }
-.title{
 
-   font-size: 250%;
-}
+ a{
+ 	font-size: 35px;
+ }
+ p{
+ 	font-size: 20px;
+ }
 
 img{
 	z-index: 2;
+
+}
+button{
+	color:#b3ffcc;
+	background: #008001;
 }
 #Logo{
 	padding: 20px;
@@ -33,6 +41,12 @@ img{
 	border-radius: 30px;
 	padding: 30px;
 }
+#SearchResult{
+	padding: 20px;
+	border-radius: 30px;
+}
+
+
 
 #SearchButton{
 	float: left
