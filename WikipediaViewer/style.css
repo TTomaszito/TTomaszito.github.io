@@ -17,9 +17,11 @@
 
  a{
  	font-size: 35px;
+
  }
  p{
  	font-size: 20px;
+ 	padding: 20px;
  }
 
 img{
@@ -49,7 +51,10 @@ button{
 
 
 #SearchButton{
-	float: left
+	float: left;
+	margin-bottom: 5px;
+
+
 }
 #RandomArticle{
 	float: right;
