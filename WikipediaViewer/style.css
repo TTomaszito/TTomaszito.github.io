@@ -1,6 +1,8 @@
+
+
+
 .container{
   margin-top:50px;
-  border-style: solid;
   max-width: 80%;
 }
 .row{
@@ -13,8 +15,25 @@
     padding: 20px;
  }
 .title{
+
    font-size: 250%;
 }
+
+img{
+	z-index: 2;
+}
+#Logo{
+	padding: 20px;
+	background: #b3ffcc;
+	border-radius: 30px  150px;
+
+}
+#SearchBar{
+	background: #b3ffcc;
+	border-radius: 30px;
+	padding: 30px;
+}
+
 #SearchButton{
 	float: left
 }
