@@ -18,8 +18,8 @@ $(document).ready(function() {
 	  	console.log(search_term,results_number);
 
 	  	var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + "%22+" +
-	  	search_term + "+%22&limit=" +
-	  	results_number + "&format=json&callback=?";
+	  		search_term + "+%22&limit=" +
+	  		results_number + "&format=json&callback=?";
 
 	  	$.ajax({
 
@@ -35,16 +35,22 @@ $(document).ready(function() {
 		        	var title = results[1][i];
 		        	var summary = results[2][i];
 		        	var link = results[3][i];
-		        	console.log(title)
+		        	console.log(results)
 
-		        	$("#DisplayArticles").append('<div class="title">' + title + '</div>');
+		        	$("#DisplayArticles").append('<a class="title"' +'href="' + link +'">' + title + '</a>');
 		        	$("#DisplayArticles").append('<div class="summary">'+ summary + '</div>');
-		        	$("#DisplayArticles").append('<div class="link">'+ link + '</div>');
 
 		        	if (title == undefined){
 
 		        		$("#DisplayArticles").empty();
 		        	};
+
+		        	if (summary === ""){
+
+		        		$("#DisplayArticles").pop();
+		        	};
+
+		        	
 
 	        	};
 

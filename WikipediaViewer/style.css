@@ -3,36 +3,43 @@
   border-style: solid;
   max-width: 80%;
 }
+.row{
+	margin-top:10px;
+	margin-bottom:40px;
+	margin-right:0px;
+	margin-left:0px;
+}
 .col-lg-12{
-   border-style: solid;
-   padding: 20px;
+    padding: 20px;
  }
 .title{
    font-size: 250%;
 }
-
-input,select,button {
-   height: 32px;
-   border-radius: 5px;
- }
-
-#SearchBar input[type="text"] {
-	float: center;
-    width: 50%;
+#SearchButton{
+	float: left
+}
+#RandomArticle{
+	float: right;
 }
 
-#SearchBar input[type="submit"] {
-	float: center;
-    width: 15%;
-    margin-left: 10px;
-}
-#SearchBar select[id="SearchNumber"] {
-	float: left;
-	width: 5%;
-	margin-right: 10px;
 
+
+#ThirdCol{
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right:0px;
+	padding-left:0px;
 }
-#SearchBar button[id="RandomArticle"] {
-	float: center;
-    width: 15%;
+#SecondCol {
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+#FirstCol {
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+
+#SearchNumber{
+	height: 32px;
 }

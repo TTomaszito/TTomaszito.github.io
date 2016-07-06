@@ -6,23 +6,43 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 " id="SearchBar">
+      <div class="col-lg-12" id="SearchBar">
 
-        <form id="target" action="#" method="get">
-          <input  type="text" id="SearchTerm"></input>
-          <input class="btn" type="submit" value="Search"></input>
-          <select  id="SearchNumber">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-          </select>
-          <button class="btn" id="RandomArticle" >Random</button>
+        <form id="target"  method="get">
+          <div class="form-group">
+
+            <div class="col-sm-1" id="FirstCol">
+               <select  id="SearchNumber">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+              </select> 
+            </div>
+
+            <div class="col-sm-6" id="SecondCol">
+
+              <input type="search" class="form-control" type="text" id="SearchTerm">
+
+            </div>
+            
+            <div class="col-sm-5" id="ThirdCol">
+              <div class="col-sm-6">
+                <button class="btn btn-block " type="submit" value="Search" id="SearchButton"> Search </button>
+              </div>
+
+              <div class="col-sm-6">
+                <button class="btn  btn-block " id="RandomArticle" >Random</button>
+              </div>
+              
+            </div>
+
+          </div>
         </form>
 
       </div>
-     
-      <div class="col-md-12" id="DisplayArticles">
+
+      <div class="col-sm-12" id="DisplayArticles">
       </div>
     </div>
   </div>
