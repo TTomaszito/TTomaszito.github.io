@@ -16,8 +16,8 @@ $(document).ready(function() {
 	  	var results_number = $("#SearchNumber").val();
 
  
-	  	var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + "%22+" +
-	  		search_term + "+%22&limit=" +
+	  	var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
+	  		search_term + "&limit=" +
 	  		results_number + "&format=json&callback=?";
 
 	  	$.ajax({
@@ -31,6 +31,7 @@ $(document).ready(function() {
 	        	 // empty's the div on every new search.
 	        	$("#SearchResult").empty();
 	        	$("#SearchResult").css("background-color","#b3ffcc");
+	        	console.log(results)
 	        	 
 
 	        	for (i = 0; i < results_number; i++) {
