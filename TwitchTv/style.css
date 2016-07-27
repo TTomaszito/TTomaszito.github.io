@@ -1,8 +1,11 @@
 
+h1{
+	text-align: center;
+}
+
 .container{
 	border-style: solid;
 }
-
 
 #Nav_Buttons{
 	border-style: solid;
