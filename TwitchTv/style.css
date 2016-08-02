@@ -1,10 +1,15 @@
+body{
+	background-color: gray;
+}
 
 h1{
 	text-align: center;
 }
 
-.container{
+.container-flex{
 	border-style: solid;
+	background-color: white;
+	margin-top: 20px;
 }
 
 #Nav_Buttons{
