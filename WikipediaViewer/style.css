@@ -15,11 +15,16 @@
     padding: 20px;
  }
 
- a{
+body{
+	background-color: black;
+}
+
+a{
  	font-size: 35px;
 
  }
- p{
+
+p{
  	font-size: 20px;
  	padding: 20px;
  }

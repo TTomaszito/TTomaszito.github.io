@@ -47,7 +47,7 @@ $(document).ready(function() {
 		        	if (title === undefined){
 
 		        		$("#SearchResult").empty();
-		        		$("#SearchResult").css("background-color","white");
+		        		$("#SearchResult").css("background-color","black");
 
 		        	};
 
