@@ -28,6 +28,8 @@ $(document).ready(function() {
 
 	  		success: function(results) {
 
+	  			console.log(results);
+
 	        	 // empty's the div on every new search.
 	        	$("#SearchResult").empty();
 	        	$("#SearchResult").css("background-color","#b3ffcc");
