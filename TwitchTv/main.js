@@ -77,7 +77,7 @@ $( document ).ready(
 				event.preventDefault();
 				$("#test").empty();
 
-				var Livestream = $('<iframe class="livestream" src="http://www.twitch.tv/'+ 
+				var Livestream = $('<iframe class="livestream" src="https://www.twitch.tv/'+ 
 				channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
 
 				 $("#test").append(Livestream);
