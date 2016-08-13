@@ -1,30 +1,50 @@
 body{
-	background-color: gray;
+	background-color: white;
 }
 
-h1{
-	text-align: center;
-}
+
 
 .container-flex{
-	border-style: solid;
+	
 	background-color: white;
 	margin-top: 20px;
 }
-.Results-channel{
-	margin: 5px;
-	background-color: gray;
+
+.nav-btn{
+	margin: 10px; 
+}
+.content{
+	margin: 10px;
 }
 
-#Nav_Buttons{
-	border-style: solid;
+.channel-div{
+
+	margin: 10px;
+	background-color: #e3dbf0;
+}
+.col-xs-4{
+	text-align: center;
+}
+
+#test{
+	text-align: center;
 }
 
 
-#myDIV {
+ 
+ 
+
+
+.wrapper {
     width: 100%;
     padding: 50px 0;
     text-align: center;
     background-color: lightblue;
     margin-top:20px;
+}
+
+input[name="C4"] { 
+	margin: 5px;
+	background-color: gray;
+
 }

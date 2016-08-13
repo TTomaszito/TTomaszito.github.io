@@ -39,34 +39,54 @@ $( document ).ready(
 
 		    $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel, function(data) {
 
-		    var channel_DIV = "#"+channel+"myDIV";
-		    var channel_watch_btn =  "#"+channel+"btn";
+		    var channel_div = "#"+channel;
 
+		    var Left_channel_div = "#" + "left" +channel
+		    var Center_channel_div = "#" + "Center" +channel
+		    var Right_channel_div = "#" + "Right" +channel
+
+		    var channel_button = "#"+channel + "-btn"
+		    
 
 		    $("#Results").append(
 
-		    	"<div class=" + "Results-channel" + " " + "id=" + channel + "myDIV" + "/>" + "</div>" 
-		    );
-
-		    $(channel_DIV).append(
-
-		    	"<div id="+ channel +">" +"sentence"+ "</div>" +
-
-		    	"<button id=" + channel + "btn"+ ">" + "Watch Stream" + "</button>" 
+		    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
 
 		    );
 
+		    $(channel_div).addClass("channel-div");
 
-		    $(channel_watch_btn).click(function(event){
+
+
+		    $(channel_div).append(
+
+		    	"<div class=" + "col-xs-4" +" "+"id=Left"+ channel+ ">" + "sentence2" + "</div>"+
+		    	"<div class=" + "col-xs-4" +" "+"id=Center" + channel+">" + "sentence3" + "</div>"+
+		    	"<div class=" + "col-xs-4" +" "+"id=Right"+ channel+ ">" + "</div>"
+
+		    );
+
+		    $(Right_channel_div).append(
+
+		    	"<button id=" + channel +"-btn" + ">"+"Watch" +"</button>"
+
+		    );
+
+
+		   $(channel_button).click(function(event){
 				event.preventDefault();
-				console.log("click" + channel);
+				$("#test").empty();
+
+				var Livestream = $('<iframe class="livestream" src="http://www.twitch.tv/'+ 
+				channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
+
+				 $("#test").append(Livestream);
+
+
+				
 			});
 				
-		    	 
-					    	
-		  	
 		  		
-		  	this.url = "http://twitch.tv/"+ channel;	
 		  	this.stream_status = data;
 		  	console.log(this.stream_status);
 
@@ -91,9 +111,14 @@ $( document ).ready(
 		     
 		    	
 		  	$("#Results").append("Results are online");	
-		  		
-		  		
-
+		  	/*	
+		  	   if (data.stream) {
+		    	console.log("succes");
+			};
+			if (data.stream == null) {} {
+				console.log("null")
+			};	
+			*/
 		  	this.stream_status = data;
 		  	console.log("onlin");
 		  	});
