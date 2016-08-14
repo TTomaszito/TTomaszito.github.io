@@ -73,16 +73,24 @@ $( document ).ready(
 		    );
 
 
+
+
 		   $(channel_button).click(function(event){
+
+		   		var Livestream = $('<iframe class="livestream" src="https://www.twitch.tv/'+ 
+				channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
+				
 				event.preventDefault();
+
 				$("#test").empty();
 
-				var Livestream = $('<iframe class="livestream" src="https://www.twitch.tv/'+ 
-				channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
+				$("#video").append(
+
+		    		"<div class=" + "video-container" +" "+"id="+"test" + "></div>"
+
+		    	);
 
 				 $("#test").append(Livestream);
-
-
 				
 			});
 				
