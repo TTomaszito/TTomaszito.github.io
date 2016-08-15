@@ -101,10 +101,6 @@ $( document ).ready(
 
 			    	);
 	 			};
-	 			
-	 			 
-
-			    
 
 
 			   $(channel_button).click(function(event){
@@ -141,22 +137,95 @@ $( document ).ready(
 
 		List.forEach(function logArrayElements (channel, index, a) {
 
-		    $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel, function(data) {
+		       $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel, function(data) {
 
-		     
-		    	
-		  	$("#Results").append("Results are online");	
-		  	/*	
-		  	   if (data.stream) {
-		    	console.log("succes");
-			};
-			if (data.stream == null) {} {
-				console.log("null")
-			};	
-			*/
-		  	this.stream_status = data;
-		  	console.log("onlin");
-		  	});
+			    var channel_div = "#"+channel;
+
+			    var Left_channel_div = "#" + "Left" +channel
+			    var Center_channel_div = "#" + "Center" +channel
+			    var Right_channel_div = "#" + "Right" +channel
+
+			    var channel_button = "#"+channel + "-btn"
+			    
+			    if(data.stream !== null){
+
+				    $("#Results").append(
+
+				    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
+
+				    );
+
+				    $(channel_div).addClass("channel-div");
+
+
+
+				    $(channel_div).append(
+
+				    	"<div class=" + "col-xs-4" +" "+"id=Left"+ channel+ ">" + "</div>"+
+				    	"<div class=" + "col-xs-4" +" "+"id=Center" + channel+">" + "</div>"+
+				    	"<div class=" + "col-xs-4" +" "+"id=Right"+ channel+ ">" + "</div>"
+
+				    );
+
+				    $(Right_channel_div).append(
+
+				    	"<button id=" + channel +"-btn" + ">"+"Watch" +"</button>"
+
+				    );
+
+				    $(Center_channel_div).append(
+
+				    	"<p id=" + channel +"-name" + ">"+ channel.toString() +"</p>"
+
+				    );
+
+		 			
+
+		 			if(data.stream == null){
+		 				console.log("no data")
+
+		 				$(Left_channel_div).append(
+
+				    		"<img class="+"img-responsive center-block"+" "+"style=" + "height:100px;" +" "+ "src="+ 
+				    		"http://s.jtvnw.net/jtv_user_pictures/hosted_images/GlitchIcon_PurpleonWhite.png" +">" 
+
+				    	);
+		 			}
+		 				 
+		 			else{
+		 				console.log(data.stream.channel.logo)
+
+		 				$(Left_channel_div).append(
+
+				    		"<img class="+"img-responsive center-block"+" "+"style=" + "height:100px;" +" "+ "src="+ 
+				    		data.stream.channel.logo +">"  
+
+				    	);
+		 			};
+
+
+				   $(channel_button).click(function(event){
+
+				   		var Livestream = $('<iframe class="livestream" src="https://www.twitch.tv/'+ 
+						channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
+						
+						event.preventDefault();
+
+						$("#video").empty();
+
+						$("#video").append(
+
+				    		"<div class=" + "video-container" +" "+"id="+"video-stream" + "></div>"
+
+				    	);
+
+						 $("#video-stream").append(Livestream);
+						
+					});
+
+				};
+ 
+			});
 	    	
 	    });
 
@@ -170,17 +239,95 @@ $( document ).ready(
 
 		List.forEach(function logArrayElements (channel, index, a) {
 
-		    $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel, function(data) {
+		       $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel, function(data) {
 
-		    
-		    	
-		  	$("#Results").append("results are offline");	
-		  		
-		  		
+			    var channel_div = "#"+channel;
 
-		  	this.stream_status = data;
-		  	console.log("offline");
-		  	});
+			    var Left_channel_div = "#" + "Left" +channel
+			    var Center_channel_div = "#" + "Center" +channel
+			    var Right_channel_div = "#" + "Right" +channel
+
+			    var channel_button = "#"+channel + "-btn"
+			    
+			    if (data.stream == null) {
+
+				    $("#Results").append(
+
+				    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
+
+				    );
+
+				    $(channel_div).addClass("channel-div");
+
+
+
+				    $(channel_div).append(
+
+				    	"<div class=" + "col-xs-4" +" "+"id=Left"+ channel+ ">" + "</div>"+
+				    	"<div class=" + "col-xs-4" +" "+"id=Center" + channel+">" + "</div>"+
+				    	"<div class=" + "col-xs-4" +" "+"id=Right"+ channel+ ">" + "</div>"
+
+				    );
+
+				    $(Right_channel_div).append(
+
+				    	"<button id=" + channel +"-btn" + ">"+"Watch" +"</button>"
+
+				    );
+
+				    $(Center_channel_div).append(
+
+				    	"<p id=" + channel +"-name" + ">"+ channel.toString() +"</p>"
+
+				    );
+
+		 			
+
+		 			if(data.stream == null){
+		 				console.log("no data")
+
+		 				$(Left_channel_div).append(
+
+				    		"<img class="+"img-responsive center-block"+" "+"style=" + "height:100px;" +" "+ "src="+ 
+				    		"http://s.jtvnw.net/jtv_user_pictures/hosted_images/GlitchIcon_PurpleonWhite.png" +">" 
+
+				    	);
+		 			}
+		 				 
+		 			else{
+		 				console.log(data.stream.channel.logo)
+
+		 				$(Left_channel_div).append(
+
+				    		"<img class="+"img-responsive center-block"+" "+"style=" + "height:100px;" +" "+ "src="+ 
+				    		data.stream.channel.logo +">"  
+
+				    	);
+		 			};
+
+
+				   $(channel_button).click(function(event){
+
+				   		var Livestream = $('<iframe class="livestream" src="https://www.twitch.tv/'+ 
+						channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
+						
+						event.preventDefault();
+
+						$("#video").empty();
+
+						$("#video").append(
+
+				    		"<div class=" + "video-container" +" "+"id="+"video-stream" + "></div>"
+
+				    	);
+
+						 $("#video-stream").append(Livestream);
+						
+					});
+				
+				};
+ 
+			});
 	    	
 	    });
 
