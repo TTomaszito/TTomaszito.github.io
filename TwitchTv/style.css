@@ -2,11 +2,20 @@ body{
 	background-color:#f1edf8;
 }
 button{
+	margin-top: 2%;
+	margin-bottom: 2%;
 	background-color: #e3dbf0;
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+
 }
 
 html, body, .container-fluid{
    height:100%;
+}
+p {
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .container-flex{
@@ -89,8 +98,3 @@ html, body, .container-fluid{
     margin-top:20px;
 }
 
-input[name="C4"] { 
-	margin: 5px;
-	background-color: gray;
-
-}

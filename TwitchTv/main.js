@@ -68,15 +68,16 @@ $( document ).ready(
 
 			    $(Right_channel_div).append(
 
-			    	"<button id=" + channel +"-btn" + ">"+"Watch" +"</button>"
+			    	"<button id=" + channel +"-btn" +" "+ "style=" + "margin-top:35px;margin-bottom:35px;"+ ">"+"Watch" +"</button>"
 
 			    );
 
 			    $(Center_channel_div).append(
 
-			    	"<p id=" + channel +"-name" + ">"+ channel.toString() +"</p>"
+			    	"<p id=" + channel +"-name" + " " +"style=" + "padding-top:35px;padding-bottom:35px;"+">"+ channel.toString() +"</p>"
 
 			    );
+
 
 	 			
 
@@ -151,7 +152,7 @@ $( document ).ready(
 
 				    $("#Results").append(
 
-				    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
+			    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
 
 				    );
 
@@ -169,15 +170,16 @@ $( document ).ready(
 
 				    $(Right_channel_div).append(
 
-				    	"<button id=" + channel +"-btn" + ">"+"Watch" +"</button>"
+				    	"<button id=" + channel +"-btn" +" "+ "style=" + "margin-top:35px;margin-bottom:35px;"+ ">"+"Watch" +"</button>"
 
 				    );
 
 				    $(Center_channel_div).append(
 
-				    	"<p id=" + channel +"-name" + ">"+ channel.toString() +"</p>"
+				    	"<p id=" + channel +"-name" + " " +"style=" + "padding-top:35px;padding-bottom:35px;"+">"+ channel.toString() +"</p>"
 
 				    );
+
 
 		 			
 
@@ -253,7 +255,7 @@ $( document ).ready(
 
 				    $("#Results").append(
 
-				    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
+			    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
 
 				    );
 
@@ -271,15 +273,16 @@ $( document ).ready(
 
 				    $(Right_channel_div).append(
 
-				    	"<button id=" + channel +"-btn" + ">"+"Watch" +"</button>"
+				    	"<button id=" + channel +"-btn" +" "+ "style=" + "margin-top:35px;margin-bottom:35px;"+ ">"+"Watch" +"</button>"
 
 				    );
 
 				    $(Center_channel_div).append(
 
-				    	"<p id=" + channel +"-name" + ">"+ channel.toString() +"</p>"
+				    	"<p id=" + channel +"-name" + " " +"style=" + "padding-top:35px;padding-bottom:35px;"+">"+ channel.toString() +"</p>"
 
 				    );
+
 
 		 			
 
