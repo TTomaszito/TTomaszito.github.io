@@ -1,10 +1,14 @@
 
+$("#video_controls").hide();
+$("#Lights_Off").toggle(false);
 
 $( document ).ready(
 
 	function Main() {
 
 		var List = ["ESL_SC2","Admiral_Bahroo", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]
+
+		
 
     	Get_data_initial();
 
@@ -104,7 +108,7 @@ $( document ).ready(
 	 			};
 
 
-			   $(channel_button).click(function(event){
+			   	$(channel_button).click(function(event){
 
 			   		var Livestream = $('<iframe class="livestream" src="https://www.twitch.tv/'+ 
 					channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
@@ -115,12 +119,35 @@ $( document ).ready(
 
 					$("#video").append(
 
-			    		"<div class=" + "video-container" +" "+"id="+"video-stream" + "></div>"
+			    		"<div class=" + "video-container" +" "+"id="+"video_stream" + "></div>"
 
 			    	);
 
-					 $("#video-stream").append(Livestream);
+			    	$("#video_controls").show();
+
+
+					$("#video_stream").append(Livestream);
+
 					
+				});
+
+
+			   	$("#Off_Video_Button").on("click",function(){
+
+			   		$("#video").empty();
+			   		$("#video_controls").hide();
+
+			   	});
+
+			   	$("#Cinema_Mode").on("click",function(event){
+			   		event.stopPropagation();
+
+			   		$("#Lights_Off").toggle(true);
+
+			   	});
+			   	$("body").on('click', function (event) {
+
+    				$("#Lights_Off").toggle(false);
 				});
 				
  

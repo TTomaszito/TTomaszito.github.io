@@ -1,14 +1,20 @@
 body{
 	background-color:#f1edf8;
 }
-button{
+
+.btn{
+	border-radius: 0px;
 	margin-top: 2%;
 	margin-bottom: 2%;
 	background-color: #e3dbf0;
-	font-size: 20px;
+	font-size: 15px;
 	font-family: 'Open Sans', sans-serif;
-
 }
+.btn:hover{
+	background-color:#b8a3db;
+}
+
+
 
 html, body, .container-fluid{
    height:100%;
@@ -28,7 +34,23 @@ p {
 	background-color: white;
 	padding-top: 5%;
 	padding-bottom: 5%;
+
 	
+}
+#video_controls{
+	background-color: black;
+	z-index:3;
+	 
+
+	
+}
+#Cinema_Mode ,#Off_Video_Button {
+	margin-bottom: 0%;
+	margin-top: 0%;
+
+	
+
+
 }
 
 .video-container {
@@ -47,6 +69,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index:2;
      
 }
 
@@ -73,19 +96,29 @@ p {
 	padding-top: 2%;
 	padding-bottom: 2%;
 	background-color: white;
-	border-radius: 5px;
+	border-radius: 0px;
 
 }
 .col-xs-4{
 	text-align: center;
 }
 
-#video-stream{
+#video_stream{
 	text-align: center;
 	margin: 0px;
 }
 
-
+#Lights_Off {
+	background:#000;
+	opacity:0.9;
+	filter:alpha(opacity=90);
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:1;
+}
  
  
 
