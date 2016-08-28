@@ -72,9 +72,11 @@ $( document ).ready(
 
 			    $(Right_channel_div).append(
 
-			    	"<button id=" + channel +"-btn" +" "+ "style=" + "margin-top:35px;margin-bottom:35px;"+ ">"+"Watch" +"</button>"
+			    	"<button id=" + channel +"-btn" + ">"+"Watch" +"</button>"
 
 			    );
+			    $(channel_button).addClass("channel_Button");
+
 
 			    $(Center_channel_div).append(
 
@@ -177,9 +179,9 @@ $( document ).ready(
 			    
 			    if(data.stream !== null){
 
-				    $("#Results").append(
+				   	$("#Results").append(
 
-			    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
+				    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
 
 				    );
 
@@ -197,9 +199,11 @@ $( document ).ready(
 
 				    $(Right_channel_div).append(
 
-				    	"<button id=" + channel +"-btn" +" "+ "style=" + "margin-top:35px;margin-bottom:35px;"+ ">"+"Watch" +"</button>"
+				    	"<button id=" + channel +"-btn" + ">"+"Watch" +"</button>"
 
 				    );
+				    $(channel_button).addClass("channel_Button");
+
 
 				    $(Center_channel_div).append(
 
@@ -233,7 +237,7 @@ $( document ).ready(
 		 			};
 
 
-				   $(channel_button).click(function(event){
+				   	$(channel_button).click(function(event){
 
 				   		var Livestream = $('<iframe class="livestream" src="https://www.twitch.tv/'+ 
 						channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
@@ -244,14 +248,38 @@ $( document ).ready(
 
 						$("#video").append(
 
-				    		"<div class=" + "video-container" +" "+"id="+"video-stream" + "></div>"
+				    		"<div class=" + "video-container" +" "+"id="+"video_stream" + "></div>"
 
 				    	);
 
-						 $("#video-stream").append(Livestream);
+				    	$("#video_controls").show();
+
+
+						$("#video_stream").append(Livestream);
+
 						
 					});
 
+
+				   	$("#Off_Video_Button").on("click",function(){
+
+				   		$("#video").empty();
+				   		$("#video_controls").hide();
+
+				   	});
+
+				   	$("#Cinema_Mode").on("click",function(event){
+				   		event.stopPropagation();
+
+				   		$("#Lights_Off").toggle(true);
+
+				   	});
+				   	$("body").on('click', function (event) {
+
+	    				$("#Lights_Off").toggle(false);
+					});
+
+				    
 				};
  
 			});
@@ -280,9 +308,9 @@ $( document ).ready(
 			    
 			    if (data.stream == null) {
 
-				    $("#Results").append(
+					$("#Results").append(
 
-			    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
+				    	"<div" +" "+ "class=row"+" "+"id=" + channel + ">" +  "</div>"
 
 				    );
 
@@ -300,9 +328,11 @@ $( document ).ready(
 
 				    $(Right_channel_div).append(
 
-				    	"<button id=" + channel +"-btn" +" "+ "style=" + "margin-top:35px;margin-bottom:35px;"+ ">"+"Watch" +"</button>"
+				    	"<button id=" + channel +"-btn" + ">"+"Watch" +"</button>"
 
 				    );
+				    $(channel_button).addClass("channel_Button");
+
 
 				    $(Center_channel_div).append(
 
@@ -336,7 +366,7 @@ $( document ).ready(
 		 			};
 
 
-				   $(channel_button).click(function(event){
+				   	$(channel_button).click(function(event){
 
 				   		var Livestream = $('<iframe class="livestream" src="https://www.twitch.tv/'+ 
 						channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
@@ -347,12 +377,35 @@ $( document ).ready(
 
 						$("#video").append(
 
-				    		"<div class=" + "video-container" +" "+"id="+"video-stream" + "></div>"
+				    		"<div class=" + "video-container" +" "+"id="+"video_stream" + "></div>"
 
 				    	);
 
-						 $("#video-stream").append(Livestream);
+				    	$("#video_controls").show();
+
+
+						$("#video_stream").append(Livestream);
+
 						
+					});
+
+
+				   	$("#Off_Video_Button").on("click",function(){
+
+				   		$("#video").empty();
+				   		$("#video_controls").hide();
+
+				   	});
+
+				   	$("#Cinema_Mode").on("click",function(event){
+				   		event.stopPropagation();
+
+				   		$("#Lights_Off").toggle(true);
+
+				   	});
+				   	$("body").on('click', function (event) {
+
+	    				$("#Lights_Off").toggle(false);
 					});
 				
 				};
@@ -362,9 +415,6 @@ $( document ).ready(
 	    });
 
 	};
-
-
-
 
 });
 

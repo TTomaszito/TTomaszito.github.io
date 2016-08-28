@@ -3,13 +3,14 @@
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     	<link rel="stylesheet" type="text/css" href="style.css">
     
 	
 	</head>
 
 	<body>
-		<div id='Lights_Off'></div>
+		<div id='Lights_Off' value="0"></div>
 
 		<div class="container">
 			<div class="row logo">
@@ -21,11 +22,17 @@
 
 			<div class="row" id="video_controls">
 				<div class="col-sm-6">
-					<button id="Cinema_Mode">Cinema Mode</button>	
+					<button class="control_buttons" id="Cinema_Mode">
+						<span>
+							<i class="material-icons">wb_incandescent</i>
+						</span>
+					</button>	
 				</div>
 
-				<div class="col-sm-6">
-					<button id="Off_Video_Button"> X </button>
+				<div class="col-sm-6" >
+					<button class="control_buttons" id="Off_Video_Button">
+						<i class="material-icons">clear</i>
+					</button>
 				</div>
 				
 			</div>

@@ -1,6 +1,8 @@
 body{
 	background-color:#f1edf8;
 }
+ 
+/* Button visual style for channels  filter buttons */
 
 .btn{
 	border-radius: 0px;
@@ -14,7 +16,38 @@ body{
 	background-color:#b8a3db;
 }
 
+/* Button visual style for watch video buttons */
+.channel_Button{
+	 
+  border:none;
+  box-shadow:none;
+  text-shadow:none;
+  height:100px;
+  width:100px;
+	background-color: #e3dbf0;
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+}
+.channel_Button:hover{
+	background-color:#b8a3db;
+}
 
+.control_buttons{
+	border:none;
+  	box-shadow:none;
+  	text-shadow:none;
+  	background-color: black;
+  	color: white;
+  	font-family: 'Open Sans', sans-serif;
+
+}
+.control_buttons:hover{
+	color: yellow;
+
+}
+#Off_Video_Button{
+	float:right;
+}
 
 html, body, .container-fluid{
    height:100%;
@@ -63,7 +96,7 @@ p {
     background-color: black;
     
 }
-.video-container iframe {
+iframe {
     position: absolute;
     top:0;
     left: 0;
