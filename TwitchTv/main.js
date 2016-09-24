@@ -7,7 +7,7 @@ $( document ).ready(
 	function Main() {
 
 		var List = ["ESL_SC2","Admiral_Bahroo", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]
-
+		var key ='?client_id=ppxdre5syg8v8d5dtkekx8govyvshgv'
 		
 
     	Get_data_initial();
@@ -37,11 +37,13 @@ $( document ).ready(
 	function Get_data_initial(){
 
 		$("#Results").empty();
+
+		var key ='?client_id=ppxdre5syg8v8d5dtkekx8govyvshgv'
 		
 
 		List.forEach(function logArrayElements (channel, index, a) {
 
-		    $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel, function(data) {
+		    $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel + key, function(data) {
 
 			    var channel_div = "#"+channel;
 
@@ -91,7 +93,7 @@ $( document ).ready(
 
 		List.forEach(function logArrayElements (channel, index, a) {
 
-		       $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel, function(data) {
+		       $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel + key, function(data) {
 
 			    var channel_div = "#"+channel;
 
@@ -144,7 +146,7 @@ $( document ).ready(
 
 		List.forEach(function logArrayElements (channel, index, a) {
 
-		       $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel, function(data) {
+		       $.getJSON('https://api.twitch.tv/kraken/streams/'+ channel + key, function(data) {
 
 			    var channel_div = "#"+channel;
 

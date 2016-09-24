@@ -29,8 +29,10 @@ function LightsOff(){
 
 function ShowVideo(channel){
 
-	var Livestream = $('<iframe class="livestream" src="https://www.twitch.tv/'+ 
-	channel +'/embed" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
+
+
+	var Livestream = $('<iframe class="livestream" src="https://player.twitch.tv/'+'?channel='+ 
+	channel +'" frameborder="0" scrolling="no" height="720" width="1080" align="middle"></iframe>');
 	
 	event.preventDefault();
 
