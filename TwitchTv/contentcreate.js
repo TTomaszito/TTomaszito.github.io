@@ -101,6 +101,7 @@ function AppendStructure(channel,channel_button,channel_div,Center_channel_div,R
     $(Center_channel_div).append(
 
     	"<p id=" + channel +"-name" + " " +"style=" + "padding-top:35px;padding-bottom:35px;"+">"+ channel.toString() +"</p>"
+    	
 
     );
 };

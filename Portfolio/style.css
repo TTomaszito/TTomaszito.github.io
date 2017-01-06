@@ -1,0 +1,19 @@
+body {
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.strip{
+  margin-top: 30px;
+  padding:30px 30px ;
+  background: black;
+  color: white;
+}
+.strip2{
+  Padding:30px 30px ;
+  background: white;
+  color: black;
+}
