@@ -6,21 +6,36 @@ window.onload = function preload(){
 
 	ContactImage.src =ImageArray[0];
 	IntroImage.src= ImageArray[1];
-
-	$('body').css('background-image', 'url('+ ContactImage.src +')');
+	
+	imageLoad()
+		
 
 
 	$(window).on('scroll', function () {
-	    var scrollTop     = $(window).scrollTop(), // 
-	        elementOffset = $('.strip2').offset().top,
-	        distance      = (elementOffset - scrollTop);
+	    imageLoad()
+	});
+}
+
+$(document).ready(
+
+	function formsubmit(){
+		console.log('redy')
+	}
+
+)
+
+
+/// helper functions
+
+function imageLoad(){
+	var scrollTop     = $(window).scrollTop(), // 
+	    elementOffset = $('.strip2').offset().top,
+		distance      = (elementOffset - scrollTop);
 
 	    if (distance < 0) {
 			$('body').css('background-image', 'url('+ IntroImage.src +')');
 		}
 		else{
 			$('body').css('background-image', 'url('+ ContactImage.src +')');
-		}
-
-	});
+	}
 }
