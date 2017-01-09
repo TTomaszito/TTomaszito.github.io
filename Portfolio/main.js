@@ -8,6 +8,25 @@ window.onload = function preload(){
 	IntroImage.src= ImageArray[1];
 	
 	imageLoad()
+
+	$("#submitbutton").click(function(event){
+		event.preventDefault(); //Prevents page from reloding everytime function runs on click event
+		var name = $('#name').val()
+		var email = $('#email').val()
+		var text = $('#message').val()
+		
+		var message = {"name":name,"email":email,"text":text}
+
+		var saveData = $.ajax({
+		    type: "POST",
+		    url: "http://localhost:3000/mail",
+		    data: message,
+	        dataType: "json",
+   	        success: function(Data){
+		        console.log(Data)
+		    }
+		});
+	})
 		
 
 
@@ -16,13 +35,7 @@ window.onload = function preload(){
 	});
 }
 
-$(document).ready(
 
-	function formsubmit(){
-		console.log('redy')
-	}
-
-)
 
 
 /// helper functions
