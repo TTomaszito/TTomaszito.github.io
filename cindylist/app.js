@@ -4,7 +4,7 @@ app.controller("myCtrl", function($scope,$http) {
 	console.log("Hello from controller");
     
 
-    $http.get("http://localhost:3000/test").then(function(response){
+    $http.get("https://dashboard.heroku.com/apps/cindyeats/test").then(function(response){
 
 			$scope.Restaurantlist = response.data;
 
@@ -24,7 +24,7 @@ app.controller("myCtrl", function($scope,$http) {
 
 
 	function refresh(){
-    	$http.get("http://localhost:3000/test").then(function(response){
+    	$http.get("https://dashboard.heroku.com/apps/cindyeats/test").then(function(response){
       		
       		$scope.Restaurantlist = response.data;
       		$scope.restaurant.name = "";
@@ -36,7 +36,7 @@ app.controller("myCtrl", function($scope,$http) {
 
     $scope.remove = function(id) {
     	console.log(id);
-    	$http.post("http://localhost:3000/removeRestaurant/" + id ).then(function(response) {
+    	$http.post("https://dashboard.heroku.com/apps/cindyeats/removeRestaurant/" + id ).then(function(response) {
 	      	
 	      	refresh();
     });
