@@ -54,8 +54,8 @@
 					          </tr>
 					          <tr ng-repeat="restaurant in Restaurantlist">
 					            <td>{{restaurant.name}}</td>
-					            <td><a href={{restaurant.link}}>Visit link</a></td>
-					            
+					            <td><a ng-href="/{{restaurant.link}}">Visit link</a></td>
+
 					            <td><button class="btn btn-danger" ng-click="remove(restaurant._id)">Remove</button></td>
 					            <
 					          </tr>
