@@ -13,7 +13,7 @@ app.controller("myCtrl", function($scope,$http) {
 
     $scope.addRestaurant = function(){
 	    //console.log($scope.restaurant);
-	    $http.post("http://localhost:3000/addRestaurant",$scope.restaurant)
+	    $http.post("https://dashboard.heroku.com/apps/cindyeats/addRestaurant",$scope.restaurant)
 	    .then(function(response){
 	      	console.log(response);
 	      	refresh();
